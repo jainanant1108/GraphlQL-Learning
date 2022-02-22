@@ -35,6 +35,34 @@ const resolvers = {
       USERLIST.push(user);
       return user;
     },
+    // updateUsername: (parent, args) => {
+    //   const { id, newUsername } = args.input;
+    //   let userUpdated;
+    //   USERLIST.forEach((user) => {
+    //     if (user.id === id) {
+    //       user.username = newUsername;
+    //       userUpdated = user;
+    //     }
+    //   });
+    //   return userUpdated;
+    // },
+    updateUsername: (parent, args) => {
+      const { id, newUsername } = args.input;
+      let userUpdated;
+      USERLIST.forEach((user) => {
+        if (user.id == id) {
+          user.username = newUsername;
+          userUpdated = user;
+        }
+      });
+      return userUpdated;
+    },
+
+    deleteUser: (parent, args) => {
+      const id = args.id;
+      _.remove(USERLIST, (user) => user.id === Number(id));
+      return null;
+    },
   },
 };
 
