@@ -68,4 +68,27 @@ const USERLIST = [
   },
 ];
 
-module.exports = { USERLIST };
+const MOVIELIST = [
+  {
+    id: 1,
+    name: "Aashiqui 2",
+    released: true,
+  },
+  {
+    id: 2,
+    name: "DDLJ",
+    released: true,
+  },
+  {
+    id: 3,
+    name: "Avengers",
+    released: true,
+  },
+  {
+    id: 4,
+    name: "Greys",
+    released: true,
+  },
+];
+
+module.exports = { USERLIST, MOVIELIST };
